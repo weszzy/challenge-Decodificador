@@ -7,14 +7,7 @@
     --cor-apagada: #B3A398;
     --cor-primaria-botao: #283b1e;
     --cor-secundaria-botao: #b1d67f;
-
-
-    .inter-tight-principal {
-        font-family: "Inter Tight", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-    }
+    --cor-terciaria-botao: #d7e4c0;
 }
 
 body {
@@ -22,110 +15,211 @@ body {
     background-color: var(--cor-primaria);
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 1.25em;
 }
 
 header {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding-left: 10px;
+    padding-left: 0.625em;
 }
 
 .logo {
-    font-size: 36px;
+    font-size: 2.25em;
     font-weight: bold;
     color: var(--cor-secundaria);
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 main {
-    padding: 50px;
+    padding: 3.125em;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1100px;
+    max-width: 68.75em;
+    flex-direction: row;
 }
 
 .input-section {
-    padding: auto;
     flex: 1;
-    width: 500px;
-    margin-right: 10px;
-
+    width: 31.25em;
 }
-
 
 #input-text {
     background-color: var(--cor-primaria);
-    width: 600px;
-    padding: 70px;
+    width: 100%;
+    padding: 4.375em;
     border: none;
-    border-radius: 10px;
-    font-size: 32px;
-    margin-bottom: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625em;
+    font-size: 2em;
+    margin-bottom: 0.625em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
 }
 
 .info {
-    font-size: 13px;
+    font-size: 0.8125em;
     color: var(--cor-apagada);
-    margin-left: 160px;
-
+    margin-left: 10em;
 }
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 1.25em;
     justify-content: center;
-    height: 50px;
+    height: 3.125em;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 0.625em 1.25em;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 0.3125em;
+    font-size: 1em;
     cursor: pointer;
     font-weight: bold;
 }
 
+.copiar-btn {
+    background-color: var(--cor-terciaria);
+    margin-top: 13.625em;
+    display: none;
+    margin-left: 6.25em;
+}
+
 #icons {
-    height: 15px;
+    height: 0.9375em;
 }
 
 #criptografar-btn {
     background-color: var(--cor-primaria-botao);
     color: white;
-    width: 200px;
+    width: 12.5em;
 }
 
 #descriptografar-btn {
     background-color: var(--cor-secundaria-botao);
     color: black;
-    width: 200px;
+    width: 12.5em;
 }
 
 .output-section {
     display: initial;
-    height: 600px;
-    width: 300px;
+    height: 37.5em;
+    width: 18.75em;
     text-align: center;
     background-color: var(--cor-primaria-botao);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.25em;
+    border-radius: 0.625em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
 }
-
-
 
 .output-section p {
     color: var(--cor-primaria);
-    margin: 10px 0;
+    margin: 0.625em 0;
+}
+
+@media (max-width: 48em) {
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        max-width: 20em;
+    }
+
+    .container {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5em;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 1.25em;
+        justify-content: center;
+    }
+
+    .input-section {
+        padding: 0.5em;
+        width: 1em;
+        max-width: 37.5em;
+    }
+
+    .output-section {
+        margin-top: 50px;
+        width: 100%;
+        padding: 0.5em;
+
+    }
+
+    #input-text {
+        padding: 0.5em;
+        font-size: 1em;
+    }
+
+    .info {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        height: 3.125em;
+    }
+
+    .copiar-btn {
+        margin-top: 1.25em;
+        margin-left: 110px;
+    }
+}
+
+
+@media (max-width: 30em) {
+
+
+    header {
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 1.75em;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    .input-section {
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .output-section {
+        width: 100%;
+    }
+
+    #input-text {
+        padding: 0.5;
+        font-size: 1.125em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.625em;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    #criptografar-btn, #descriptografar-btn {
+        width: 100%;
+    }
 }
