@@ -1,24 +1,30 @@
+// função pra criptografar
+
 document.getElementById('criptografar-btn').addEventListener('click', function () {
     const inputText = document.getElementById('input-text').value;
     if (validateInput(inputText)) {
         const textoCriptografado = criptografar(inputText);
         displayOutput(textoCriptografado);
-        showCopyButton(); // mostra o botão de copiar
+        showCopyButton(); // botão de copiar
     } else {
         displayOutput('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D7E4C0" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"></path></svg> Use apenas letras minúsculas e sem acentos ou caracteres especiais.');
     }
 });
+
+// função pra descriptografar
 
 document.getElementById('descriptografar-btn').addEventListener('click', function () {
     const inputText = document.getElementById('input-text').value;
     if (validateInput(inputText)) {
         const textoDescriptografado = descriptografar(inputText);
         displayOutput(textoDescriptografado);
-        showCopyButton(); // mostra o botão de copiar
+        showCopyButton(); // botão de copiar
     } else {
         displayOutput('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#D7E4C0" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"></path></svg> Use apenas letras minúsculas e sem acentos ou caracteres especiais.');
     }
 });
+
+// regras para criptografia e descriptografia
 
 function criptografar(texto) {
     return texto
@@ -42,6 +48,8 @@ function validateInput(texto) {
     return /^[a-z\s]*$/.test(texto);
 }
 
+
+
 function displayOutput(mensagem) {
     const outputSection = document.querySelector('.output-section');
     outputSection.style.display = 'block';
@@ -61,6 +69,8 @@ function showCopyButton() {
     }
 }
 
+// alert pra quando um texto for copiado
+
 function copyToClipboard(texto) {
     navigator.clipboard.writeText(texto).then(() => {
         alert('Texto copiado!');
@@ -68,5 +78,7 @@ function copyToClipboard(texto) {
         console.error('Erro ao copiar o texto: ', err);
     });
 }
+
+// sessão de output aparacer ao iniciar a tela e não mostrar botão de copiar
 
 document.querySelector('.output-section').style.display = 'initial';
