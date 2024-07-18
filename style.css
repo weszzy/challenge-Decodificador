@@ -1,6 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #D7E4C0;
+    --cor-secundaria: #557445;
+    --cor-terciaria: #BBC3A4;
+    --cor-apagada: #B3A398;
+    --cor-primaria-botao: #283b1e;
+    --cor-secundaria-botao: #b1d67f;
+
+
+    .inter-tight-principal {
+        font-family: "Inter Tight", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+    }
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F4F6FA;
+    font-family: "Inter Tight", sans-serif;
+    background-color: var(--cor-primaria);
     margin: 0;
     padding: 0;
 }
@@ -16,48 +35,56 @@ header {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    padding-left: 10px;
 }
 
 .logo {
     font-size: 36px;
     font-weight: bold;
-    color: #345C7D;
+    color: var(--cor-secundaria);
     margin-bottom: 20px;
 }
 
 main {
+    padding: 50px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 .input-section {
+    padding: auto;
     flex: 1;
-    margin-right: 20px;
+    width: 500px;
+    margin-right: 10px;
+
 }
 
-.input-section h1 {
-    color: #345C7D;
-}
 
 #input-text {
-    width: 40em;
-    padding: 10px;
-    border: 1px solid #CCC;
-    border-radius: 5px;
-    font-size: 16px;
+    background-color: var(--cor-primaria);
+    width: 600px;
+    padding: 70px;
+    border: none;
+    border-radius: 10px;
+    font-size: 32px;
     margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .info {
-    font-size: 12px;
-    color: #888;
+    font-size: 13px;
+    color: var(--cor-apagada);
+    margin-left: 160px;
+
 }
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    justify-content: center;
+    height: 50px;
 }
 
 button {
@@ -66,34 +93,39 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-#encrypt-btn {
-    background-color: #345C7D;
+#icons {
+    height: 15px;
+}
+
+#criptografar-btn {
+    background-color: var(--cor-primaria-botao);
     color: white;
+    width: 200px;
 }
 
-#decrypt-btn {
-    background-color: #E0E7EF;
-    color: #345C7D;
+#descriptografar-btn {
+    background-color: var(--cor-secundaria-botao);
+    color: black;
+    width: 200px;
 }
 
 .output-section {
+    display: initial;
+    height: 600px;
     width: 300px;
     text-align: center;
-    background-color: #FFFFFF;
+    background-color: var(--cor-primaria-botao);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.output-section img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
+
 
 .output-section p {
-    color: #345C7D;
+    color: var(--cor-primaria);
     margin: 10px 0;
 }
