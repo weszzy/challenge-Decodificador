@@ -8,6 +8,7 @@
     --cor-primaria-botao: #283b1e;
     --cor-secundaria-botao: #b1d67f;
     --cor-terciaria-botao: #d7e4c0;
+    --base-font-size: 16px;
 }
 
 body {
@@ -15,192 +16,192 @@ body {
     background-color: var(--cor-primaria);
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: var(--base-font-size);
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.25em;
+    padding: 1.25rem;
 }
 
 header {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding-left: 0.625em;
+    padding-left: 0.625rem;
 }
 
 .logo {
-    font-size: 2.25em;
+    font-size: 2.25rem;
     font-weight: bold;
     color: var(--cor-secundaria);
-    margin-bottom: 1.25em;
+    margin-bottom: 1.25rem;
 }
 
 main {
-    padding: 3.125em;
+    padding: 50px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 68.75em;
-    flex-direction: row;
+    max-width: 1100px;
 }
 
 .input-section {
+    padding: auto;
     flex: 1;
-    width: 31.25em;
+    width: 500px;
+    margin-right: 10px;
+
 }
+
 
 #input-text {
     background-color: var(--cor-primaria);
-    width: 100%;
-    padding: 4.375em;
+    width: 600px;
+    padding: 70px;
     border: none;
-    border-radius: 0.625em;
-    font-size: 2em;
-    margin-bottom: 0.625em;
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .info {
-    font-size: 0.8125em;
+    font-size: 0.8125rem;
     color: var(--cor-apagada);
-    margin-left: 10em;
+    margin-left: 10rem;
 }
 
 .buttons {
     display: flex;
-    gap: 1.25em;
+    gap: 1.25rem;
     justify-content: center;
-    height: 3.125em;
+    height: 3.125rem;
 }
 
 button {
-    padding: 0.625em 1.25em;
+    padding: 0.625rem 1.25rem;
     border: none;
-    border-radius: 0.3125em;
-    font-size: 1em;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
     cursor: pointer;
     font-weight: bold;
 }
 
 .copiar-btn {
     background-color: var(--cor-terciaria);
-    margin-top: 13.625em;
+    margin-top: 13.625rem;
     display: none;
-    margin-left: 6.25em;
+    margin-left: 6.25rem;
 }
 
 #icons {
-    height: 0.9375em;
+    height: 0.9375rem;
 }
 
 #criptografar-btn {
     background-color: var(--cor-primaria-botao);
     color: white;
-    width: 12.5em;
+    width: 12.5rem;
 }
 
 #descriptografar-btn {
     background-color: var(--cor-secundaria-botao);
     color: black;
-    width: 12.5em;
+    width: 12.5rem;
 }
 
 .output-section {
     display: initial;
-    height: 37.5em;
-    width: 18.75em;
+    height: 37.5rem;
+    width: 18.75rem;
     text-align: center;
     background-color: var(--cor-primaria-botao);
-    padding: 1.25em;
-    border-radius: 0.625em;
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .output-section p {
     color: var(--cor-primaria);
-    margin: 0.625em 0;
+    margin: 0.625rem 0;
 }
 
-@media (max-width: 48em) {
+@media (max-width: 768px) {
 
     main {
         flex-direction: column;
         align-items: center;
-        max-width: 20em;
+        max-width: 20rem;
     }
 
     .container {
-        justify-content: center;
         flex-direction: column;
         align-items: center;
-        padding: 0.5em;
+        padding: 1rem;
     }
 
     .buttons {
         display: flex;
-        gap: 1.25em;
+        gap: 1.25rem;
         justify-content: center;
     }
 
     .input-section {
-        padding: 0.5em;
-        width: 1em;
-        max-width: 37.5em;
+        padding: 0.5rem;
+        width: 1rem;        
     }
 
     .output-section {
-        margin-top: 50px;
+        margin-top: 3.125rem;
         width: 100%;
-        padding: 0.5em;
-
+        padding: 0.5rem;
     }
 
     #input-text {
-        padding: 0.5em;
-        font-size: 1em;
+        padding: 1rem;
+        font-size: 1rem;
+        width: 20rem;
     }
 
     .info {
         margin-left: 0;
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 0.3125rem;
     }
 
     .buttons {
         display: flex;
         justify-content: center;
-        height: 3.125em;
+        height: 3.125rem;
     }
 
     .copiar-btn {
-        margin-top: 1.25em;
-        margin-left: 110px;
+        margin-top: 1.25rem;
+        margin-left: 6.875rem;
     }
 }
 
-
-@media (max-width: 30em) {
-
+@media (max-width: 480px) {
 
     header {
         justify-content: center;
     }
 
     .logo {
-        font-size: 1.75em;
+        font-size: 1.75rem;
     }
 
     main {
-        padding: 1em;
+        padding: 1rem;
     }
 
     .input-section {
         width: 100%;
-        margin-right: 10px;
+        padding: 0.5rem;
     }
 
     .output-section {
@@ -208,18 +209,71 @@ button {
     }
 
     #input-text {
-        padding: 0.5;
-        font-size: 1.125em;
+        padding: 0.5rem;
+        font-size: 1.125rem;
+        width: 20rem;
     }
 
     .buttons {
         flex-direction: column;
-        gap: 0.625em;
+        gap: 0.625rem;
         align-items: center;
-        margin-left: 15px;
+        margin-left: 0.9375rem;
     }
 
     #criptografar-btn, #descriptografar-btn {
         width: 100%;
     }
+}
+
+@media (max-width: 1366px) {
+
+    header {
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .input-section {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .output-section {
+        width: 100%;
+    }
+
+    .info {
+        align-items: center;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #input-text {
+        padding: 0.5rem;
+        font-size: 1.125rem;
+        width: 20rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.625rem;
+        align-items: center;
+        margin-left: 0.9375rem;
+    }
+
+    #criptografar-btn, #descriptografar-btn {
+        width: 100%;
+    }
+
+    .copiar-btn {
+        margin-left: 13rem;
+    }
+
 }
