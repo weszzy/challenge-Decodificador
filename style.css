@@ -98,7 +98,8 @@ button {
     background-color: var(--cor-terciaria);
     margin-top: 13.625rem;
     display: none;
-    margin-left: 6.25rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #icons {
@@ -121,7 +122,7 @@ button {
 
 .output-section {
     display: initial;
-    height: 37.5rem;
+    height: 29.5rem;
     width: 18.75rem;
     text-align: center;
     background-color: var(--cor-primaria-botao);
@@ -159,13 +160,15 @@ button {
 
     .input-section {
         padding: 0.5rem;
-        width: 1rem;        
+        width: 1rem;
     }
 
     .output-section {
         margin-top: 3.125rem;
         width: 100%;
         padding: 0.5rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #input-text {
@@ -188,9 +191,13 @@ button {
 
     .copiar-btn {
         margin-top: 1.25rem;
-        margin-left: 6.875rem;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    ;
 }
+
 
 @media (max-width: 480px) {
 
@@ -213,6 +220,8 @@ button {
 
     .output-section {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #input-text {
@@ -231,6 +240,12 @@ button {
     #criptografar-btn, #descriptografar-btn {
         width: 100%;
     }
+
+    .copiar-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 @media (max-width: 1366px) {
@@ -254,6 +269,8 @@ button {
 
     .output-section {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .info {
@@ -280,7 +297,8 @@ button {
     }
 
     .copiar-btn {
-        margin-left: 13rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
