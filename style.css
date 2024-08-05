@@ -94,6 +94,12 @@ button {
     font-weight: bold;
 }
 
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #78ABA8; /* Cor de foco visível */
+}
+
 .copiar-btn {
     background-color: var(--cor-terciaria);
     margin-top: 13.625rem;
